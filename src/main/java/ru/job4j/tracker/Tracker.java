@@ -49,25 +49,6 @@ public class Tracker {
         int index = indexOf(id);
         item.setId(id);
         items[index] = item;
-        boolean rsl = index != -1;
-        if (rsl) {
-            items[index] = item;
-        }
-        return rsl;
-    }
-
-    public boolean delete(int id) {
-        int index = indexOf(id);
-        boolean rsl = index != -1;
-        if (rsl) {
-            int start = index + 1;
-            int distPos = index;
-            int length = size - index - 1;
-            Item item = items[distPos];
-            items[size - 1] = null;
-            size--;
-            System.arraycopy(items, start, items, distPos, length);
-        }
-        return rsl;
+        return index != -1;
     }
 }
