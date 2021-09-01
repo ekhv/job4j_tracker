@@ -5,6 +5,7 @@ import java.util.Date;
 public class Student {
     private String fullName;
     private String group;
+    private Date receiptDate;
 
     public String getFullName() {
         return fullName;
@@ -29,6 +30,4 @@ public class Student {
     public void setReceiptDate(Date receiptDate) {
         this.receiptDate = receiptDate;
     }
-
-    private Date receiptDate;
 }
