@@ -16,13 +16,4 @@ public class StartUITest {
         Item expected = new Item("Fix PC");
         assertThat(created.getName(), is(expected.getName()));
     }
-
-    @Test
-    public void whenCreateItem() {
-        String[] answers = {"Fix PC"};
-        Input input = new StubInput(answers);
-        Tracker tracker = new Tracker();
-        StartUI.createItem(input, tracker);
-        assert tracker.findByName("Fix PC").length > 0;
-    }
 }
