@@ -97,7 +97,7 @@ public class StartUITest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new FindAll(out),
+                new FindAllAction(out),
                 new ExitAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
@@ -131,7 +131,7 @@ public class StartUITest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new FindByName(out),
+                new FindByNameAction(out),
                 new ExitAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
@@ -165,7 +165,7 @@ public class StartUITest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new FindById(out),
+                new FindByIdAction(out),
                 new ExitAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
