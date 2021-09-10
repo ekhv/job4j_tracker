@@ -18,14 +18,17 @@ public class ValidateInputTest {
     }
 
     @Test
-    public void whenInvalidInput111Then1() {
+    public void whenInvalidInput123Then123() {
         Output out = new StubOutput();
-        Input in = new StubInput(
-                new String[]{"1", "1", "1"}
-        );
-        ValidateInput input = new ValidateInput(out, in);
-        int selected = input.askInt("Enter menu:");
-        assertThat(selected, is(1));
+        String[] values = new String[]{"1", "2", "3"};
+        for (String val: values) {
+            Input in = new StubInput(
+                    new String[]{val}
+            );
+            ValidateInput input = new ValidateInput(out, in);
+            int selected = input.askInt("Enter menu:");
+            assertThat(selected, is(Integer.parseInt(val)));
+        }
     }
 
     @Test
