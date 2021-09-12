@@ -34,7 +34,7 @@ public class Tracker {
         return Arrays.copyOf(rsl, counter);
     }
 
-    private int indexOf(int id) {
+    public int indexOf(int id) {
         int rsl = -1;
         for (int index = 0; index < size; index++) {
             if (items[index].getId() == id) {
