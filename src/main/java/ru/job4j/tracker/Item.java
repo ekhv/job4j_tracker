@@ -22,7 +22,7 @@ public class Item {
         this.name = name;
     }
 
-    public LocalDateTime getCreated(){
+    public LocalDateTime getCreated() {
         return created;
     }
 
